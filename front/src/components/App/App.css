@@ -1,0 +1,53 @@
+.nes-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin-bottom: 15px;
+    display: block;
+    width: 100%;
+    font-family: 'Press Start 2P', serif;
+    background-color: #212529;
+}
+
+.nes-header > .container {
+    padding-top: 1rem;
+    padding-bottom: 0.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nes-header > .container > .nes-badge {
+    margin-right: 4%;
+}
+
+.nes-is-dark-inverted {
+    position: absolute;
+    font-size: 16px;
+    top: 0;
+    background-color: white;
+    box-shadow: 0 0.5em white, 0 -0.5em white, 0.5em 0 white, -0.5em 0 white;
+    width: 100%;
+    text-align: center;
+    color: #212529;
+}
+
+.nes-logo-header {
+    position: relative;
+    right: 5%;
+    width: auto;
+    height: 80px;
+    border-radius: 100px;
+    margin-right: 4%;
+    border: white 3px solid;
+}
+
+.nes-layout {
+    margin: 130px auto 0;
+}
+
+body {
+    padding: 0 2rem;
+    margin: 0 2rem;
+}

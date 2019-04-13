@@ -20,9 +20,12 @@ export function getActiveCSS() {
 }
 
 export const CSSBulma = {
-  button: 'button'
+  button: 'button',
+  layout: '',
 };
 
 export const CSSNes = {
-  button: 'nes-btn'
+  button: 'nes-btn',
+  badge: 'nes-badge',
+  layout: 'nes-layout',
 };
