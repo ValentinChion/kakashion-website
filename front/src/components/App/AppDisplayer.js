@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import Test from '../Test/Test';
 import CSSTranslate from '../CSSHandle/CSSTranslate';
 import Landing from '../Landing/Landing';
+import About from '../About/About';
 
 class AppDisplayer extends Component {
   render() {
@@ -9,8 +10,9 @@ class AppDisplayer extends Component {
     return (
       <>
         {navbar}
+        <Landing/>
         <div className={classes.layout}>
-          <Landing/>
+          <About/>
           <Test/>
         </div>
       </>
