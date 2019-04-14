@@ -1,0 +1,235 @@
+$size: 3px; //size of pixels
+$tick: 0.15s;
+@mixin pixelmatic($art, $size: 10px) {
+  display: block;
+  height: $size;
+  width: $size;
+  $shadow: 0 0 transparent;
+  @for $y from 1 through length($art) {
+    @for $x from 1 through length(nth($art, $y)) {
+      $shadow: $shadow
+            + ", " +
+            ($x * $size)
+        + " " +
+        ($y * $size)
+        + " " +
+        nth(nth($art, $y), $x) ;
+    }
+  }
+  box-shadow: unquote($shadow);
+}
+
+$b0: transparent;
+$b1: #000; //black
+$b2: #FFBDB5; //pinkish
+$b3: #FF9C3A; //orange
+$b4: #DE2900; //red
+$block: $b1 $b1 $b1 $b1 $b1 $b1 $b1 $b1 $b1 $b1 $b1 $b1 $b1 $b1 $b1 $b1,
+$b1 $b2 $b2 $b1 $b2 $b2 $b2 $b2 $b2 $b2 $b2 $b2 $b1 $b2 $b2 $b1,
+$b1 $b2 $b2 $b1 $b2 $b3 $b3 $b3 $b3 $b3 $b3 $b2 $b1 $b2 $b2 $b1,
+$b1 $b2 $b2 $b1 $b2 $b3 $b3 $b3 $b3 $b3 $b3 $b2 $b1 $b2 $b2 $b1,
+$b1 $b2 $b2 $b1 $b2 $b3 $b3 $b3 $b3 $b3 $b3 $b2 $b1 $b2 $b2 $b1,
+$b1 $b2 $b2 $b1 $b2 $b3 $b3 $b3 $b3 $b3 $b3 $b2 $b1 $b2 $b2 $b1,
+$b1 $b2 $b2 $b1 $b2 $b2 $b2 $b2 $b2 $b2 $b2 $b2 $b1 $b2 $b2 $b1,
+$b1 $b1 $b1 $b1 $b1 $b1 $b1 $b1 $b1 $b1 $b1 $b1 $b1 $b1 $b1 $b1,
+$b1 $b2 $b2 $b2 $b2 $b2 $b1 $b2 $b2 $b1 $b2 $b2 $b2 $b2 $b2 $b1,
+$b1 $b2 $b3 $b3 $b3 $b2 $b1 $b2 $b2 $b1 $b2 $b3 $b3 $b3 $b2 $b1,
+$b1 $b2 $b3 $b3 $b3 $b2 $b1 $b2 $b2 $b1 $b2 $b3 $b3 $b3 $b2 $b1,
+$b1 $b2 $b3 $b3 $b3 $b2 $b1 $b2 $b2 $b1 $b2 $b3 $b3 $b3 $b2 $b1,
+$b1 $b2 $b3 $b3 $b3 $b2 $b1 $b2 $b2 $b1 $b2 $b3 $b3 $b3 $b2 $b1,
+$b1 $b2 $b3 $b3 $b3 $b2 $b1 $b2 $b2 $b1 $b2 $b3 $b3 $b3 $b2 $b1,
+$b1 $b2 $b2 $b2 $b2 $b2 $b1 $b2 $b2 $b1 $b2 $b2 $b2 $b2 $b2 $b1,
+$b1 $b1 $b1 $b1 $b1 $b1 $b1 $b1 $b1 $b1 $b1 $b1 $b1 $b1 $b1 $b1;
+
+$block2: $b1 $b1 $b1 $b1 $b1 $b1 $b1 $b1 $b1 $b1 $b1 $b1 $b1 $b1 $b1 $b1,
+$b1 $b2 $b2 $b1 $b2 $b2 $b2 $b2 $b2 $b2 $b2 $b2 $b1 $b2 $b2 $b1,
+$b1 $b2 $b2 $b1 $b2 $b3 $b3 $b3 $b3 $b3 $b3 $b2 $b1 $b2 $b2 $b1,
+$b1 $b2 $b2 $b1 $b2 $b3 $b3 $b3 $b3 $b3 $b3 $b2 $b1 $b2 $b2 $b1,
+$b1 $b2 $b2 $b1 $b2 $b3 $b3 $b3 $b3 $b3 $b3 $b2 $b1 $b2 $b2 $b1,
+$b1 $b2 $b2 $b1 $b2 $b3 $b3 $b3 $b3 $b3 $b3 $b2 $b1 $b2 $b2 $b1,
+$b1 $b2 $b2 $b1 $b2 $b2 $b2 $b2 $b2 $b2 $b2 $b2 $b1 $b2 $b2 $b1,
+$b1 $b1 $b1 $b1 $b1 $b1 $b1 $b1 $b1 $b1 $b1 $b1 $b1 $b1 $b1 $b1,
+$b1 $b2 $b2 $b2 $b2 $b2 $b1 $b2 $b2 $b1 $b2 $b2 $b2 $b2 $b2 $b1,
+$b1 $b2 $b3 $b3 $b3 $b2 $b1 $b2 $b2 $b1 $b2 $b3 $b3 $b2 $b2 $b1,
+$b1 $b2 $b3 $b3 $b3 $b2 $b1 $b2 $b2 $b1 $b2 $b3 $b2 $b2 $b2 $b1,
+$b1 $b2 $b3 $b3 $b3 $b2 $b1 $b2 $b2 $b1 $b2 $b2 $b2 $b2 $b2 $b1,
+$b1 $b2 $b3 $b3 $b3 $b2 $b1 $b2 $b2 $b1 $b2 $b2 $b2 $b2 $b2 $b1,
+$b1 $b2 $b3 $b3 $b3 $b2 $b1 $b2 $b2 $b1 $b2 $b2 $b2 $b2 $b2 $b1,
+$b1 $b2 $b2 $b2 $b2 $b2 $b1 $b2 $b2 $b1 $b2 $b2 $b2 $b2 $b2 $b1,
+$b1 $b1 $b1 $b1 $b1 $b1 $b1 $b1 $b1 $b1 $b1 $b1 $b1 $b1 $b1 $b1;
+
+$block3: $b1 $b1 $b1 $b1 $b1 $b1 $b1 $b1 $b1 $b1 $b1 $b1 $b1 $b1 $b1 $b1,
+$b1 $b2 $b2 $b1 $b2 $b2 $b2 $b2 $b2 $b2 $b2 $b2 $b1 $b2 $b2 $b1,
+$b1 $b2 $b2 $b1 $b2 $b3 $b3 $b3 $b3 $b3 $b3 $b2 $b1 $b2 $b2 $b1,
+$b1 $b2 $b2 $b1 $b2 $b3 $b3 $b3 $b3 $b3 $b2 $b2 $b1 $b2 $b2 $b1,
+$b1 $b2 $b2 $b1 $b2 $b3 $b3 $b3 $b3 $b2 $b2 $b2 $b1 $b2 $b2 $b1,
+$b1 $b2 $b2 $b1 $b2 $b3 $b3 $b3 $b2 $b2 $b2 $b2 $b1 $b2 $b2 $b1,
+$b1 $b2 $b2 $b1 $b2 $b2 $b2 $b2 $b2 $b2 $b2 $b2 $b1 $b2 $b2 $b1,
+$b1 $b1 $b1 $b1 $b1 $b1 $b1 $b1 $b1 $b1 $b1 $b1 $b1 $b1 $b1 $b1,
+$b1 $b2 $b2 $b2 $b2 $b2 $b1 $b2 $b2 $b1 $b2 $b2 $b2 $b2 $b2 $b1,
+$b1 $b2 $b3 $b3 $b2 $b2 $b1 $b2 $b2 $b1 $b2 $b2 $b2 $b2 $b2 $b1,
+$b1 $b2 $b3 $b2 $b2 $b2 $b1 $b2 $b2 $b1 $b2 $b2 $b2 $b2 $b2 $b1,
+$b1 $b2 $b2 $b2 $b2 $b2 $b1 $b2 $b2 $b1 $b2 $b2 $b2 $b2 $b2 $b1,
+$b1 $b2 $b2 $b2 $b2 $b2 $b1 $b2 $b2 $b1 $b2 $b2 $b2 $b3 $b2 $b1,
+$b1 $b2 $b2 $b2 $b2 $b2 $b1 $b2 $b2 $b1 $b2 $b2 $b3 $b3 $b2 $b1,
+$b1 $b2 $b2 $b2 $b2 $b2 $b1 $b2 $b2 $b1 $b2 $b2 $b2 $b2 $b2 $b1,
+$b1 $b1 $b1 $b1 $b1 $b1 $b1 $b1 $b1 $b1 $b1 $b1 $b1 $b1 $b1 $b1;
+$block4: $b1 $b1 $b1 $b1 $b1 $b1 $b1 $b1 $b1 $b1 $b1 $b1 $b1 $b1 $b1 $b1,
+$b1 $b2 $b2 $b1 $b2 $b2 $b2 $b2 $b2 $b2 $b2 $b2 $b1 $b2 $b2 $b1,
+$b1 $b2 $b2 $b1 $b2 $b2 $b2 $b2 $b2 $b2 $b2 $b2 $b1 $b2 $b2 $b1,
+$b1 $b2 $b2 $b1 $b2 $b2 $b2 $b2 $b2 $b2 $b2 $b2 $b1 $b2 $b2 $b1,
+$b1 $b2 $b2 $b1 $b2 $b2 $b2 $b2 $b2 $b2 $b2 $b2 $b1 $b2 $b2 $b1,
+$b1 $b2 $b2 $b1 $b2 $b2 $b2 $b2 $b2 $b2 $b2 $b2 $b1 $b2 $b2 $b1,
+$b1 $b2 $b2 $b1 $b2 $b2 $b2 $b2 $b2 $b2 $b2 $b2 $b1 $b2 $b2 $b1,
+$b1 $b1 $b1 $b1 $b1 $b1 $b1 $b1 $b1 $b1 $b1 $b1 $b1 $b1 $b1 $b1,
+$b1 $b2 $b2 $b2 $b2 $b2 $b1 $b2 $b2 $b1 $b2 $b2 $b2 $b2 $b2 $b1,
+$b1 $b2 $b2 $b2 $b2 $b2 $b1 $b2 $b2 $b1 $b2 $b3 $b3 $b3 $b2 $b1,
+$b1 $b2 $b2 $b2 $b2 $b2 $b1 $b2 $b2 $b1 $b2 $b3 $b3 $b3 $b2 $b1,
+$b1 $b2 $b2 $b2 $b2 $b2 $b1 $b2 $b2 $b1 $b2 $b3 $b3 $b3 $b2 $b1,
+$b1 $b2 $b2 $b2 $b2 $b2 $b1 $b2 $b2 $b1 $b2 $b3 $b3 $b3 $b2 $b1,
+$b1 $b2 $b2 $b2 $b2 $b2 $b1 $b2 $b2 $b1 $b2 $b3 $b3 $b3 $b2 $b1,
+$b1 $b2 $b2 $b2 $b2 $b2 $b1 $b2 $b2 $b1 $b2 $b2 $b2 $b2 $b2 $b1,
+$b1 $b1 $b1 $b1 $b1 $b1 $b1 $b1 $b1 $b1 $b1 $b1 $b1 $b1 $b1 $b1;
+.block {
+  @include pixelmatic($block, $size);
+  float: left;
+  margin-right: $size * 15;
+  animation: shine steps(1) ($tick * 4) infinite;
+}
+
+@keyframes shine {
+  0% {
+    @include pixelmatic($block, $size);
+  }
+  25% {
+    @include pixelmatic($block2, $size);
+  }
+  50% {
+    @include pixelmatic($block3, $size);
+  }
+  75% {
+    @include pixelmatic($block4, $size);
+  }
+}
+
+.space {
+  width: $size * 16;
+  height: $size * 16;
+  float: left;
+  //background: black;
+}
+
+.row {
+  height: $size * 16;
+  width: ($size * 16) * 20;
+  margin: auto;
+}
+
+body {
+  background: #9CFFF7;
+  width: 100%;
+  min-width: ($size * 16) * 15;
+}
+
+$koopa: $b0,
+$b0 $b0 $b0 $b1 $b1,
+$b0 $b0 $b1 $b2 $b2 $b1,
+$b0 $b0 $b1 $b2 $b2 $b1,
+$b0 $b1 $b2 $b2 $b2 $b1 $b1,
+$b0 $b1 $b1 $b2 $b2 $b1 $b3 $b1,
+$b0 $b1 $b1 $b2 $b2 $b1 $b3 $b3 $b1,
+$b0 $b1 $b1 $b2 $b2 $b3 $b3 $b3 $b1,
+$b0 $b1 $b2 $b2 $b2 $b3 $b3 $b3 $b1,
+$b1 $b3 $b1 $b2 $b3 $b3 $b3 $b3 $b1,
+$b1 $b3 $b3 $b3 $b3 $b3 $b3 $b1 $b0 $b0 $b1 $b1 $b1,
+$b1 $b3 $b3 $b1 $b1 $b3 $b3 $b1 $b0 $b1 $b4 $b4 $b4 $b1,
+$b1 $b3 $b1 $b0 $b1 $b3 $b1 $b2 $b1 $b4 $b1 $b4 $b1 $b4 $b1,
+$b1 $b1 $b0 $b0 $b1 $b3 $b1 $b2 $b1 $b4 $b4 $b1 $b4 $b4 $b1,
+$b0 $b0 $b0 $b1 $b3 $b3 $b1 $b2 $b1 $b4 $b1 $b4 $b1 $b4 $b4 $b1,
+$b0 $b1 $b1 $b3 $b3 $b1 $b2 $b1 $b4 $b1 $b4 $b4 $b4 $b1 $b4 $b1,
+$b0 $b1 $b3 $b3 $b3 $b1 $b2 $b1 $b1 $b4 $b4 $b4 $b4 $b4 $b1 $b1,
+$b0 $b0 $b1 $b1 $b3 $b1 $b2 $b1 $b4 $b1 $b4 $b4 $b4 $b1 $b4 $b1,
+$b0 $b0 $b0 $b1 $b3 $b1 $b2 $b1 $b4 $b4 $b1 $b4 $b1 $b4 $b4 $b1,
+$b0 $b0 $b0 $b0 $b1 $b1 $b2 $b1 $b4 $b4 $b4 $b1 $b4 $b4 $b4 $b1,
+$b0 $b0 $b0 $b0 $b0 $b1 $b2 $b2 $b1 $b4 $b1 $b4 $b1 $b4 $b1,
+$b0 $b0 $b0 $b0 $b0 $b1 $b2 $b2 $b1 $b1 $b1 $b1 $b1 $b1 $b1,
+$b0 $b0 $b0 $b0 $b0 $b1 $b1 $b2 $b2 $b2 $b2 $b2 $b2 $b2 $b2 $b1,
+$b0 $b0 $b0 $b0 $b1 $b3 $b1 $b1 $b1 $b2 $b2 $b2 $b2 $b2 $b2 $b1,
+$b0 $b0 $b0 $b1 $b3 $b3 $b3 $b3 $b1 $b1 $b1 $b1 $b1 $b1 $b1,
+$b0 $b0 $b1 $b2 $b3 $b3 $b3 $b3 $b1 $b0 $b1 $b3 $b3 $b3 $b2 $b1,
+$b0 $b0 $b1 $b1 $b1 $b1 $b1 $b1 $b0 $b0 $b1 $b1 $b1 $b1 $b1;
+$koopa2: $b0 $b0 $b0 $b1 $b1,
+$b0 $b0 $b1 $b2 $b2 $b1,
+$b0 $b0 $b1 $b2 $b2 $b1,
+$b0 $b1 $b2 $b2 $b2 $b1 $b1,
+$b0 $b1 $b1 $b2 $b2 $b1 $b3 $b1,
+$b0 $b1 $b1 $b2 $b2 $b1 $b3 $b3 $b1,
+$b0 $b1 $b1 $b2 $b2 $b3 $b3 $b3 $b1,
+$b0 $b1 $b2 $b2 $b2 $b3 $b3 $b3 $b1,
+$b1 $b3 $b3 $b2 $b3 $b3 $b3 $b3 $b1,
+$b1 $b3 $b1 $b3 $b3 $b3 $b3 $b1 $b0 $b0 $b1 $b1 $b1,
+$b1 $b3 $b3 $b3 $b3 $b3 $b3 $b1 $b0 $b1 $b4 $b4 $b4 $b1,
+$b1 $b3 $b3 $b3 $b1 $b3 $b1 $b2 $b1 $b4 $b1 $b4 $b1 $b4 $b1,
+$b1 $b3 $b3 $b1 $b1 $b3 $b1 $b2 $b1 $b4 $b4 $b1 $b4 $b4 $b1,
+$b1 $b3 $b3 $b1 $b3 $b3 $b1 $b2 $b1 $b4 $b1 $b4 $b1 $b4 $b4 $b1,
+$b0 $b1 $b3 $b1 $b3 $b1 $b2 $b1 $b4 $b1 $b4 $b4 $b4 $b1 $b4 $b1,
+$b0 $b0 $b1 $b3 $b3 $b1 $b2 $b1 $b1 $b4 $b4 $b4 $b4 $b4 $b1 $b1,
+$b0 $b0 $b1 $b1 $b3 $b1 $b2 $b1 $b4 $b1 $b4 $b4 $b4 $b1 $b4 $b1,
+$b0 $b0 $b0 $b1 $b3 $b1 $b2 $b1 $b4 $b4 $b1 $b4 $b1 $b4 $b4 $b1,
+$b0 $b0 $b0 $b0 $b1 $b1 $b2 $b1 $b4 $b4 $b4 $b1 $b4 $b4 $b4 $b1,
+$b0 $b0 $b0 $b0 $b0 $b1 $b2 $b2 $b1 $b4 $b1 $b4 $b1 $b4 $b1,
+$b0 $b0 $b0 $b0 $b0 $b1 $b2 $b2 $b1 $b1 $b1 $b1 $b1 $b1 $b1,
+$b0 $b0 $b0 $b0 $b0 $b1 $b1 $b2 $b2 $b2 $b2 $b2 $b2 $b2 $b2 $b1,
+$b0 $b0 $b0 $b0 $b0 $b0 $b1 $b1 $b1 $b2 $b2 $b2 $b2 $b2 $b2 $b1,
+$b0 $b0 $b0 $b0 $b0 $b1 $b3 $b3 $b1 $b1 $b1 $b1 $b1 $b1 $b1,
+$b0 $b0 $b0 $b0 $b0 $b1 $b3 $b3 $b3 $b1 $b3 $b3 $b3 $b1,
+$b0 $b0 $b0 $b0 $b0 $b0 $b1 $b1 $b3 $b1 $b3 $b3 $b1,
+$b0 $b0 $b0 $b0 $b0 $b0 $b0 $b1 $b1 $b1 $b1 $b1;
+.koopa {
+  top: $size * 5;
+  left: ($size * 16) * 8;
+  @include pixelmatic($koopa, $size);
+  position: relative;
+  z-index: 10000;
+  transform: translateX(0) rotateY(0deg);
+  animation: walk ($tick * 2) steps(1) infinite, flip ($tick * 24) steps(1) infinite, movement ($tick * 12) steps(12) infinite alternate;
+
+}
+
+.koopa-left {
+  top: $size * 5;
+  left: ($size * 2) * 8;
+  @include pixelmatic($koopa, $size);
+  position: relative;
+  right: $size * 20 !important;
+  z-index: 10000;
+  transform: translateX(0) rotateY(0deg);
+  animation: walk ($tick * 2) steps(1) infinite, flip ($tick * 24) steps(1) infinite, movement ($tick * 12) steps(12) infinite alternate;
+}
+
+@keyframes walk {
+  0% {
+    @include pixelmatic($koopa, $size);
+  }
+  50% {
+    @include pixelmatic($koopa2, $size);
+  }
+}
+
+@keyframes movement {
+  0% {
+    left: ($size * 16) * 8;
+  }
+  100% {
+    left: ($size * 16) * 6;
+  }
+}
+
+@keyframes flip {
+  0% {
+    transform: translateX(0) rotateY(0deg);
+  }
+  50% {
+    transform: translateX($size * 16) rotateY(180deg);
+  }
+}

@@ -5,6 +5,7 @@ import CSSTranslate from '../CSSHandle/CSSTranslate';
 import {getActiveCSS} from '../../utils/CSS';
 import BulmaNavbarDisplayer from '../Navbar/BulmaNavbarDisplayer';
 import NesNavbarDisplayer from '../Navbar/NesNavbarDisplayer';
+import './blocks.scss';
 
 class App extends Component {
   state = {
