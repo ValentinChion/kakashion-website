@@ -3,6 +3,7 @@
     top: 0;
     left: 0;
     right: 0;
+    z-index: 20;
     margin-bottom: 15px;
     display: block;
     width: 100%;
@@ -19,7 +20,15 @@
 }
 
 .nes-header > .container > .nes-badge {
-    margin-right: 4%;
+    margin-right: 4vw;
+}
+
+.has-background-white {
+    background-color: white;
+}
+
+a > .nes-badge {
+    margin-right: 4vw;
 }
 
 .nes-is-dark-inverted {
@@ -43,8 +52,20 @@
     border: white 3px solid;
 }
 
-.nes-layout {
-    /*margin: 105px auto 0;*/
+.nes-layout > .gap-header > .container {
+    max-width: 1280px;
+    padding-left: 86px;
+    padding-right: 86px;
+    margin: 4rem auto;
+}
+
+.gap-header {
+    padding-top: 70px;
+}
+
+.nes-btn:hover {
+    color: #212529;
+    text-decoration: none;
 }
 
 .nes-hero-fullheight {
@@ -88,8 +109,25 @@
     width: 50vw;
 }
 
-body {
-    margin: 0 2rem;
+.message-list > .message {
+    display: flex;
+    align-items: flex-end;
+    margin-top: 2.2rem;
+}
+
+.message-list > .message.-right i {
+    margin-left: 2rem;
+}
+
+.message-list > .message.-left i {
+    margin-right: 2rem;
+}
+
+.nes-charmander.is-flipped {
+    -moz-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
 }
 
 #ash {
