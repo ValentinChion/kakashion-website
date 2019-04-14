@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import Test from '../Test/Test';
 import CSSTranslate from '../CSSHandle/CSSTranslate';
+import Landing from '../Landing/Landing';
 
 class AppDisplayer extends Component {
   render() {
@@ -9,6 +10,7 @@ class AppDisplayer extends Component {
       <>
         {navbar}
         <div className={classes.layout}>
+          <Landing/>
           <Test/>
         </div>
       </>
