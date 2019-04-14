@@ -1,17 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b4a1ae25-bf60-468d-a860-bdf16641d0d9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/watcherTasks.xml" afterDir="false" />
+    <list default="true" id="b4a1ae25-bf60-468d-a860-bdf16641d0d9" name="Default Changelist" comment="Add CV to project for download">
       <change afterPath="$PROJECT_DIR$/src/components/About/About.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/App/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/App/App.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/App/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/App/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/App/AppDisplayer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/App/AppDisplayer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/App/blocks.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/App/blocks.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Navbar/NesNavbarDisplayer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Navbar/NesNavbarDisplayer.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -61,7 +55,7 @@
           <entry key="js" value="5506" />
           <entry key="json" value="6" />
           <entry key="scss" value="100" />
-          <entry key="txt" value="343" />
+          <entry key="txt" value="402" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
@@ -69,7 +63,7 @@
           <entry key="CSS" value="1832" />
           <entry key="JSON" value="6" />
           <entry key="JavaScript" value="5506" />
-          <entry key="PLAIN_TEXT" value="343" />
+          <entry key="PLAIN_TEXT" value="402" />
           <entry key="SCSS" value="100" />
         </counts>
       </usages-collector>
@@ -89,11 +83,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/components/App/AppDisplayer.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="15" column="18" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="18" />
+            <state relative-caret-position="90">
+              <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
               </folding>
@@ -113,7 +107,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/About/About.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="342">
@@ -208,9 +202,9 @@
         <option value="$PROJECT_DIR$/src/components/App/blocks.scss" />
         <option value="$PROJECT_DIR$/src/components/App/App.js" />
         <option value="$PROJECT_DIR$/src/components/Navbar/NesNavbarDisplayer.js" />
-        <option value="$PROJECT_DIR$/src/components/App/AppDisplayer.js" />
         <option value="$PROJECT_DIR$/src/components/App/App.css" />
         <option value="$PROJECT_DIR$/src/components/About/About.js" />
+        <option value="$PROJECT_DIR$/src/components/App/AppDisplayer.js" />
       </list>
     </option>
   </component>
@@ -343,7 +337,7 @@
       <updated>1554546434924</updated>
       <workItem from="1554546436352" duration="7241000" />
       <workItem from="1554999991317" duration="1896000" />
-      <workItem from="1555140682896" duration="24649000" />
+      <workItem from="1555140682896" duration="24825000" />
     </task>
     <task id="LOCAL-00001" summary="Adapt App main component to ease components layout">
       <created>1555156475072</created>
@@ -394,11 +388,25 @@
       <option name="project" value="LOCAL" />
       <updated>1555250353267</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Strange color in body removed">
+      <created>1555257280317</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1555257280317</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Add CV to project for download">
+      <created>1555257305747</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1555257305747</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="33786000" />
+    <option name="totallyTimeSpent" value="33962000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="25" width="1853" height="1055" extended-state="6" />
@@ -438,7 +446,9 @@
     <MESSAGE value="Add navbar components to project" />
     <MESSAGE value="Add sblocks, space and koopa design" />
     <MESSAGE value="Add landing component" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add landing component" />
+    <MESSAGE value="Strange color in body removed" />
+    <MESSAGE value="Add CV to project for download" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add CV to project for download" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="editorHistoryManager">
@@ -540,26 +550,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Landing/Landing.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="17" column="23" selection-start-line="17" selection-start-column="23" selection-end-line="17" selection-end-column="23" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/App/AppDisplayer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="15" column="18" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="18" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/utils/CSS.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="522">
@@ -594,10 +584,30 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Landing/Landing.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="17" column="23" selection-start-line="17" selection-start-column="23" selection-end-line="17" selection-end-column="23" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/About/About.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="342">
           <caret line="19" column="67" selection-start-line="19" selection-start-column="67" selection-end-line="19" selection-end-column="67" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/App/AppDisplayer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
           </folding>
