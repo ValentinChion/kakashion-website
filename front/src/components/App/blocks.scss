@@ -126,7 +126,6 @@ $b1 $b1 $b1 $b1 $b1 $b1 $b1 $b1 $b1 $b1 $b1 $b1 $b1 $b1 $b1 $b1;
 }
 
 body {
-  background: #9CFFF7;
   width: 100%;
   min-width: ($size * 16) * 15;
 }
@@ -190,7 +189,7 @@ $b0 $b0 $b0 $b0 $b0 $b0 $b0 $b1 $b1 $b1 $b1 $b1;
   left: ($size * 16) * 8;
   @include pixelmatic($koopa, $size);
   position: relative;
-  z-index: 10000;
+  z-index: 9;
   transform: translateX(0) rotateY(0deg);
   animation: walk ($tick * 2) steps(1) infinite, flip ($tick * 24) steps(1) infinite, movement ($tick * 12) steps(12) infinite alternate;
 
