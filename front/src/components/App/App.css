@@ -92,7 +92,7 @@ a > .nes-badge {
 }
 
 .nes-hero-container {
-    padding-top: 35vh;
+    padding-top: 16vw;
     margin-left: 10vh;
 }
 
@@ -108,10 +108,16 @@ a > .nes-badge {
 
 .nes-hello {
     position: absolute;
-    top: 6.5vw;
+    top: 8vw;
     left: 25vw;
     width: 25vw;
 }
+
+@media screen and (max-width: 640px) {
+    .nes-hello {
+        padding-top: 10vw;
+    }
+  }
 
 .message-list > .message {
     display: flex;
