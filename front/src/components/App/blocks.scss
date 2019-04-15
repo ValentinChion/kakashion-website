@@ -1,4 +1,4 @@
-$size: 3px; //size of pixels
+$size: 0.18vw; //size of pixels
 $tick: 0.15s;
 @mixin pixelmatic($art, $size: 10px) {
   display: block;
