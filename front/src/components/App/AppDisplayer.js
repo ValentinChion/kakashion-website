@@ -3,6 +3,7 @@ import Test from '../Test/Test';
 import CSSTranslate from '../CSSHandle/CSSTranslate';
 import Landing from '../Landing/Landing';
 import About from '../About/About';
+import { Resume } from '../Resume/Resume';
 
 class AppDisplayer extends Component {
   render() {
@@ -13,6 +14,7 @@ class AppDisplayer extends Component {
         <Landing/>
         <div className={classes.layout}>
           <About/>
+          <Resume/>
           <Test/>
         </div>
       </>
