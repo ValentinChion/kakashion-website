@@ -17,11 +17,13 @@ class NesNavbarDisplayer extends Component {
               </span>
             </div>
           </Link>
+          <Link to='Resume' spy={true} smooth={true} duration={500}>
           <div className="nes-badge">
             <span className="nes-is-dark-inverted">
               Resume
             </span>
           </div>
+          </Link>
           <div className="nes-badge">
             <span className="nes-is-dark-inverted">
               Portfolio
