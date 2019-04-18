@@ -114,6 +114,10 @@ a > .nes-badge {
     width: 25vw;
 }
 
+.nes-footer {
+    
+}
+
 @media screen and (max-width: 640px) {
     .nes-hello {
         padding-top: 10vw;
