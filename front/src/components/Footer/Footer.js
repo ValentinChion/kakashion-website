@@ -4,7 +4,9 @@ import CSSTranslate from '../CSSHandle/CSSTranslate';
 export class Footer extends Component {
   render() {
     return (
-      <progress class="nes-progress" value="90" max="100"></progress>
+      <div className="nes-footer">
+        <progress class="nes-progress" value="90" max="100" />
+      </div>
     )
   }
 }

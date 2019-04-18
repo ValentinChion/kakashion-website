@@ -4,6 +4,7 @@ import CSSTranslate from '../CSSHandle/CSSTranslate';
 import Landing from '../Landing/Landing';
 import About from '../About/About';
 import { Resume } from '../Resume/Resume';
+import { Footer } from '../Footer/Footer';
 
 class AppDisplayer extends Component {
   render() {
@@ -17,7 +18,7 @@ class AppDisplayer extends Component {
           <Resume/>
           <Test/>
         </div>
-        
+        <Footer/>
       </>
     );
   }
