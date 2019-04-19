@@ -7,8 +7,9 @@ import { Resume } from '../Resume/Resume';
 import { Footer } from '../Footer/Footer';
 
 class AppDisplayer extends Component {
+  
   render() {
-    const {navbar, classes} = this.props;
+    const {navbar, classes, scrollValue} = this.props;
     return (
       <>
         {navbar}
@@ -18,7 +19,7 @@ class AppDisplayer extends Component {
           <Resume/>
           <Test/>
         </div>
-        <Footer/>
+        <Footer scrollValue={scrollValue}/>
       </>
     );
   }

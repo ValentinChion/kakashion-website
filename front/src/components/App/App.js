@@ -12,6 +12,7 @@ import './blocks.scss';
 class App extends Component {
   state = {
     navbar: '',
+    scrollValue: 0,
   };
 
   componentDidMount() {
@@ -20,11 +21,33 @@ class App extends Component {
     } else {
       this.setState({navbar: <NesNavbarDisplayer/>})
     }
+
+    window.addEventListener('scroll', this.listenToScroll)
+  }
+
+  listenToScroll = () => {
+    const winScroll =
+      document.body.scrollTop || document.documentElement.scrollTop
+  
+    const height =
+      document.documentElement.scrollHeight -
+      document.documentElement.clientHeight
+  
+    const scrolled = winScroll / height
+  
+    this.setState({
+      scrollValue: scrolled,
+    })
+
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('scroll', this.listenToScroll)
   }
 
   render() {
     return (
-      <AppDisplayer navbar={this.state.navbar}/>
+      <AppDisplayer navbar={this.state.navbar} scrollValue={this.state.scrollValue}/>
     );
   }
 }
