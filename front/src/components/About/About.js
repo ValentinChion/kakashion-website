@@ -40,6 +40,7 @@ class About extends Component {
           <div className="lists">
             <ul className="nes-list is-disc">
               <li><span className='nes-text is-primary'>Age:</span> 22 Years</li>
+              <li><span className='nes-text is-primary'>Nationality:</span> French</li>
               <li><span className='nes-text is-primary'>Email:</span> valentin.chion@gmail.com</li>
               <li><span className='nes-text is-primary'>Phone:</span> +33 6 15 40 10 37</li>
               <li><span className='nes-text is-primary'>Address:</span> 114 Rue Eugène Jacquet, Lille 59800</li>

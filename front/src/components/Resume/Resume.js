@@ -8,7 +8,7 @@ export class Resume extends Component {
       <div className="nes-container with-title container">
         <h3 className="title">My resume</h3>
         <div className="nes-table-responsive">
-          <table class="nes-table is-dark">
+          <table className="nes-table is-dark">
             <thead>
               <tr>
                 <th>Experience</th>
@@ -17,15 +17,15 @@ export class Resume extends Component {
             </thead>
             <tbody>
               <tr>
-                <td>Talend Developper - Sopra Steria - September 2018 | ... </td>
-                <td>ITEEM - Engineering & Business School - 2014 | 2019</td>
+                <td>Talend Developper - Sopra Steria - France - September 2018 | ...</td>
+                <td>ITEEM - French Engineering & Business School - 2014 | 2019</td>
               </tr>
               <tr>
-                <td>VBA Developper - Tupperware - May | December 2017</td>
+                <td>VBA Developper - Tupperware - Belgium - May | December 2017</td>
                 <td>Major in web development - 2018 | 2019</td>
               </tr>
               <tr>
-                <td>VBA Developper - Safran Aircraft Engines - June | August 2016</td>
+                <td>VBA Developper - Safran Aircraft Engines - Vernon - June | August 2016</td>
                 <td>TOEIC - 965 | 990 - 2017</td>
               </tr>
             </tbody>
