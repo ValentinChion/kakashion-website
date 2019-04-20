@@ -27,19 +27,19 @@ class App extends Component {
 
   listenToScroll = () => {
     const winScroll =
-      document.body.scrollTop || document.documentElement.scrollTop
-  
+      document.body.scrollTop || document.documentElement.scrollTop;
+
     const height =
       document.documentElement.scrollHeight -
-      document.documentElement.clientHeight
-  
-    const scrolled = winScroll / height
-  
+      document.documentElement.clientHeight;
+
+    const scrolled = winScroll / height;
+
     this.setState({
       scrollValue: scrolled,
     })
 
-  }
+  };
 
   componentWillUnmount() {
     window.removeEventListener('scroll', this.listenToScroll)

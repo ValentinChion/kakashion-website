@@ -24,16 +24,20 @@ class NesNavbarDisplayer extends Component {
             </span>
           </div>
           </Link>
-          <div className="nes-badge">
+          <Link>
+            <div className="nes-badge">
             <span className="nes-is-dark-inverted">
               Portfolio
               </span>
-          </div>
-          <div className="nes-badge">
+            </div>
+          </Link>
+          <Link>
+            <div className="nes-badge">
             <span className="nes-is-dark-inverted">
               Contact
             </span>
-          </div>
+            </div>
+          </Link>
         </div>
       </header>
     );
