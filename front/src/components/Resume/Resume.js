@@ -32,6 +32,14 @@ export class Resume extends Component {
           </table>
         </div>
         </div>
+        <div className="mario-content">
+          <div className="mario-wrapper">
+            <div className="state1"/>
+            <div className="state2"/>
+            <div className="state3"/>
+          </div>
+          <div className="floor"/>
+        </div>
       </div>
     )
   }
