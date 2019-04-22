@@ -1,29 +1,26 @@
 import React, {Component} from 'react';
-import CSSTranslate from '../CSSHandle/CSSTranslate';
-import Hello from './Hello';
+import LandingDisplayer from './LandingDisplayer';
+import Translation from '../HOC/Translation/Translation';
 
 class Landing extends Component {
+  state = {
+    activeLanguage: '',
+  };
+
+  componentDidMount() {
+    this.setState({activeLanguage: this.props.getActiveLanguage()});
+  }
+
+  toggleLanguage = (language) => () => {
+    this.props.setLanguage(language);
+  };
+
   render() {
     return (
-      <>
-        <div className='nes-hello'>
-          <Hello/>
-        </div>
-        <div className="nes-hero-fullheight is-dark">
-          <div className="nes-hero-body">
-            <div className="nes-hero-container">
-              <p className="nes-title">I'm Valentin Chion</p>
-              <p className="nes-subtitle">A full-stack developper, and a lot more !</p>
-              <div>
-                <span id='pikachu'/>
-                <span id='ash'/>
-              </div>
-            </div>
-          </div>
-        </div>
-      </>
+      <LandingDisplayer toggleLanguage={this.toggleLanguage}
+                        activeLanguage={this.state.activeLanguage}/>
     );
   }
 }
 
-export default CSSTranslate(Landing);
+export default Translation(Landing);

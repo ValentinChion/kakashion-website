@@ -3,7 +3,8 @@ import AppDisplayer from './AppDisplayer';
 import BulmaNavbarDisplayer from '../Navbar/BulmaNavbarDisplayer';
 import NesNavbarDisplayer from '../Navbar/NesNavbarDisplayer';
 
-import CSSTranslate from '../CSSHandle/CSSTranslate';
+import CSSTranslate from '../HOC/CSSHandle/CSSTranslate';
+import Translation from '../HOC/Translation/Translation';
 import {getActiveCSS} from '../../utils/CSS';
 import './App.css';
 import './blocks.scss';
@@ -22,6 +23,9 @@ class App extends Component {
       this.setState({navbar: <NesNavbarDisplayer/>})
     }
 
+    if (!this.props.getActiveLanguage()) {
+      this.props.setLanguage('fr');
+    }
     window.addEventListener('scroll', this.listenToScroll)
   }
 
@@ -52,4 +56,4 @@ class App extends Component {
   }
 }
 
-export default CSSTranslate(App);
+export default Translation(CSSTranslate(App));

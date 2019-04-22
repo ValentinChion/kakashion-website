@@ -45,6 +45,25 @@ body {
     z-index: 10;
 }
 
+.nes-radio:checked + span::before {
+    color: white !important;
+}
+
+.nes-language {
+    position: absolute;
+    top: 13vw;
+    left: 5vw;
+    color: white;
+}
+
+.nes-language > label {
+    display: block;
+}
+
+.nes-language-flag {
+    max-height: 2vw;
+}
+
 .nes-card-image {
     display: block;
     max-height: 26vw;
