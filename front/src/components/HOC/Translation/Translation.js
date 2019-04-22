@@ -7,7 +7,7 @@ function Translation(WrappedComponent) {
       text: {}
     };
 
-    componentDidMount() {
+    componentWillMount() {
       getActiveLanguage() === 'fr' ? this.setState({text: french}) : this.setState({text: english});
     }
 
