@@ -3,6 +3,63 @@ body {
     overflow-x: hidden;
 }
 
+.nes-card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.nes-last-card-image {
+    max-height: 13vw;
+    margin: 0 auto;
+    transition: opacity .25s ease-out;
+    -moz-transition: opacity .25s ease-out;
+    -webkit-transition: opacity .25s ease-out;
+    -o-transition: opacity .25s ease-out;
+}
+
+.nes-last-card-image:hover {
+    opacity: .5;
+}
+
+.nes-card-image-container {
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    background-color: white;
+    opacity: 1;
+}
+
+.nes-is-hidden {
+    display: none !important;
+}
+
+.nes-card-item {
+    margin-top: 2vw !important;
+}
+
+.is-nes-card-icon {
+    position: absolute !important;
+    top: 45%;
+    left: 45%;
+    z-index: 10;
+}
+
+.nes-card-image {
+    display: block;
+    max-height: 26vw;
+    opacity: 1;
+    left: 20%;
+    transition: opacity .25s ease-out;
+    -moz-transition: opacity .25s ease-out;
+    -webkit-transition: opacity .25s ease-out;
+    -o-transition: opacity .25s ease-out;
+}
+
+.nes-card-image:hover {
+    opacity: .5;
+}
+
 .nes-header {
     position: fixed;
     top: 0;
