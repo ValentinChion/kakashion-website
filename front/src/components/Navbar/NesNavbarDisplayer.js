@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import CSSTranslate from '../CSSHandle/CSSTranslate';
+import CSSTranslate from '../HOC/CSSHandle/CSSTranslate';
 import kakashion from './../../utils/images/kakashion.png';
 import {Link} from 'react-scroll';
 

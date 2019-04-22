@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {CSSBulma, CSSNes, getActiveCSS, setCSS} from '../../utils/CSS';
+import {CSSBulma, CSSNes, getActiveCSS, setCSS} from '../../../utils/CSS';
 
 function CssTranslate(WrappedComponent) {
   return class extends Component {

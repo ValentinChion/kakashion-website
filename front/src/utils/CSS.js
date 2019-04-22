@@ -1,22 +1,34 @@
 export function setCSS(frameworkName) {
   if(window.localStorage.getItem('kakashion-website')) {
-    if(window.localStorage.getItem('kakashion-website') !== frameworkName) {
+    const localStorage = JSON.parse(window.localStorage.getItem('kakashion-website'));
+    if (localStorage.css !== frameworkName) {
       window.location.reload(true);
-      window.localStorage.setItem('kakashion-website', frameworkName);
+      const newLocalStorage = {
+        ...localStorage,
+        css: frameworkName,
+      };
+      window.localStorage.setItem('kakashion-website', JSON.stringify(newLocalStorage));
       return null
     }
   } else {
-    window.localStorage.setItem('kakashion-website', frameworkName);
+    const localStorage = {
+      css: frameworkName
+    };
+    window.localStorage.setItem('kakashion-website', JSON.stringify(localStorage));
   }
   getCSSfile(frameworkName);
 }
 
 export function getCSSfile() {
-  window.localStorage.getItem('kakashion-website') === 'bulma' ? require('../style/bulma.scss') : require('../style/nes.scss');
+  JSON.parse(window.localStorage.getItem('kakashion-website')).css === 'bulma' ? require('../style/bulma.scss') : require('../style/nes.scss');
 }
 
 export function getActiveCSS() {
-  return window.localStorage.getItem('kakashion-website');
+  if (window.localStorage.getItem('kakashion-website')) {
+    return JSON.parse(window.localStorage.getItem('kakashion-website')).css;
+  } else {
+    return false
+  }
 }
 
 export const CSSBulma = {

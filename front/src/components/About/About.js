@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import CSSTranslate from '../CSSHandle/CSSTranslate';
+import CSSTranslate from '../HOC/CSSHandle/CSSTranslate';
 import kakashionCV from './../../utils/CV/CV_CHION_Valentin.pdf';
 
 class About extends Component {

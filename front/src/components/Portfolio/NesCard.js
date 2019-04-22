@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import CSSTranslate from '../CSSHandle/CSSTranslate';
+import CSSTranslate from '../HOC/CSSHandle/CSSTranslate';
 
 class NesCard extends Component {
   state = {
@@ -23,6 +23,7 @@ class NesCard extends Component {
           <div className="nes-card-image-container">
             <a href={link ? link : '#'} target="_blank" rel='noopener'>
               <img className={isLast ? 'nes-last-card-image' : 'nes-card-image'}
+                   alt={'Images of my different works'}
                    src={imgsource}
                    onMouseOver={this.toggleGithubIcon}
                    onMouseLeave={this.toggleGithubIcon}/>

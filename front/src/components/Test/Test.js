@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import CSSTranslate from '../CSSHandle/CSSTranslate';
+import CSSTranslate from '../HOC/CSSHandle/CSSTranslate';
 
 class Test extends Component {
   render() {

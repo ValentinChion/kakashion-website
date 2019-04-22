@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import CSSTranslate from '../CSSHandle/CSSTranslate';
+import CSSTranslate from '../HOC/CSSHandle/CSSTranslate';
 import NesCard from './NesCard';
 import clalogo from './../../utils/images/portfolio/CLA_logo.png';
 import articles from './../../utils/images/portfolio/articles.png';
@@ -10,7 +10,7 @@ import irate from './../../utils/images/portfolio/iRate.png';
 class Portfolio extends Component {
   render() {
     return (
-      <div style={{'margin-top': '16vw'}} className="gap-header" name="Portfolio">
+      <div style={{'marginTop': '17vw'}} className="gap-header" name="Portfolio">
         <div className="nes-container with-title container">
           <h3 className="title">All my work in a nutshell</h3>
           <div className="nes-card-container">
