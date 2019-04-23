@@ -3,7 +3,7 @@ import Test from '../Test/Test';
 import CSSTranslate from '../HOC/CSSHandle/CSSTranslate';
 import Landing from '../Landing/Landing';
 import About from '../About/About';
-import { Resume } from '../Resume/Resume';
+import Resume from '../Resume/Resume';
 import { Footer } from '../Footer/Footer';
 import Portfolio from '../Portfolio/Portfolio';
 

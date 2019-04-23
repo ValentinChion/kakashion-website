@@ -1,32 +1,35 @@
 import React, { Component } from 'react'
 import CSSTranslate from '../HOC/CSSHandle/CSSTranslate';
+import Translation from '../HOC/Translation/Translation';
 
-export class Resume extends Component {
+class Resume extends Component {
   render() {
+    const {text} = this.props;
+    console.log(text);
     return (
       <div className="gap-header" name="Resume">
       <div className="nes-container with-title container">
-        <h3 className="title">My resume</h3>
+        <h3 className="title">{text.resume.title}</h3>
         <div className="nes-table-responsive">
           <table className="nes-table is-dark">
             <thead>
               <tr>
-                <th>Experience</th>
-                <th>Education</th>
+                <th>{text.resume.experience.title}</th>
+                <th>{text.resume.education.title}</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td>Talend Developper - Sopra Steria - France - September 2018 | ...</td>
-                <td>ITEEM - French Engineering & Business School - 2014 | 2019</td>
+                <td>{text.resume.experience.cellOne}</td>
+                <td>{text.resume.education.cellOne}</td>
               </tr>
               <tr>
-                <td>VBA Developper - Tupperware - Belgium - May | December 2017</td>
-                <td>Major in web development - 2018 | 2019</td>
+                <td>{text.resume.experience.cellTwo}</td>
+                <td>{text.resume.education.cellTwo}</td>
               </tr>
               <tr>
-                <td>VBA Developper - Safran Aircraft Engines - Vernon - June | August 2016</td>
-                <td>TOEIC - 965 | 990 - 2017</td>
+                <td>{text.resume.experience.cellThree}</td>
+                <td>{text.resume.education.cellThree}</td>
               </tr>
             </tbody>
           </table>
@@ -45,5 +48,5 @@ export class Resume extends Component {
   }
 }
 
-export default CSSTranslate(Resume);
+export default Translation(CSSTranslate(Resume));
 
