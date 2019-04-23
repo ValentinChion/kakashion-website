@@ -1,5 +1,5 @@
 export function setLanguage(languageName) {
-  if (window.localStorage.getItem('kakashion-website')) {
+  if (window.localStorage.getItem('kakashion-website') && JSON.parse(window.localStorage.getItem('kakashion-website')).language ) {
     const localStorage = JSON.parse(window.localStorage.getItem('kakashion-website'));
     if (localStorage.language !== languageName) {
       const newLocalStorage = {
@@ -21,7 +21,8 @@ export function setLanguage(languageName) {
 
 export function getActiveLanguage() {
   if (window.localStorage.getItem('kakashion-website')) {
-    return JSON.parse(window.localStorage.getItem('kakashion-website')).language;
+    const localStorage = JSON.parse(window.localStorage.getItem('kakashion-website'));
+      return localStorage.language ? localStorage.language : null;
   } else return null
 }
 
@@ -66,6 +67,31 @@ export const french = {
       label: 'Téléphone: ',
       info: '06 15 40 10 37'
     },
+  },
+  resume: {
+    title: 'Un mini CV',
+    experience: {
+      title:'Expérience Pro',
+      cellOne: 'Développeur Talend - Sopra Steria - Lille - Septembre 2018 | ...',
+      cellTwo: 'Développeur VBA - Tupperware - Belgique - Mai | Décembre 2017',
+      cellThree: 'Développeur VBA - Safran Aircraft Engines - Vernon - Juin | Août 2016',
+    },
+    education: {
+      title: 'Formation',
+      cellOne: 'ITEEM - Diplôme d\'ingénieur et commerciale généraliste - 2014 | 2019',
+      cellTwo: 'Spécialisation développement web - 2018 | 2019',
+      cellThree: 'TOEIC - 965 | 990 - 2017',
+    }
+  },
+  portfolio: {
+    title: 'Des exemples d\'applications',
+    cards: {
+      cardOne: 'App web CLA',
+      cardTwo: 'To-do list',
+      cardThree: 'Exemple de PWA',
+      cardFour: 'Diaporama web',
+      cardFive: 'App web iRate'
+    }
   }
 };
 
@@ -110,5 +136,30 @@ export const english = {
       label: 'Phone: ',
       info: '+33 6 15 40 10 37'
     },
+  },
+  resume: {
+    title: 'My resume',
+    experience: {
+      title:'Experience',
+      cellOne: 'Talend Developper - Sopra Steria - France - September 2018 | ...',
+      cellTwo: 'VBA Developper - Tupperware - Belgium - May | December 2017',
+      cellThree: 'VBA Developper - Safran Aircraft Engines - France - June | August 2016',
+    },
+    education: {
+      title: 'Education',
+      cellOne: 'ITEEM - French Engineering & Business School - 2014 | 2019',
+      cellTwo: 'Major in web development - 2018 | 2019',
+      cellThree: 'TOEIC - 965 | 990 - 2017',
+    },
+  },
+  portfolio: {
+    title: 'All my work in a nutshell',
+    cards: {
+      cardOne: 'CLA Webapp',
+      cardTwo: 'To-do list',
+      cardThree: 'PWA example',
+      cardFour: 'Slideshow',
+      cardFive: 'iRate Webapp'
+    }
   }
 };
