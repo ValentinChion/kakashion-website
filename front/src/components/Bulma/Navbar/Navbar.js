@@ -1,14 +1,15 @@
 import React, {Component} from 'react';
 import CSSTranslate from '../../HOC/CSSHandle/CSSTranslate';
+import NavbarDisplayer from './NavbarDisplayer';
 
-class BulmaNavbarDisplayer extends Component {
+class Navbar extends Component {
   render() {
     return (
       <div>
-        P'tit test
+        <NavbarDisplayer/>
       </div>
     );
   }
 }
 
-export default CSSTranslate(BulmaNavbarDisplayer);
+export default CSSTranslate(Navbar);

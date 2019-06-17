@@ -24,6 +24,7 @@ function CssTranslate(WrappedComponent) {
     render() {
       return <WrappedComponent classes={this.state.classes}
                                toggleCSSFramework={this.toggleCSSFramework}
+                               getActiveCSS={getActiveCSS}
                                {...this.props}/>
     }
   }

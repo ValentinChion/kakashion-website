@@ -629,3 +629,8 @@ progress[value]::-webkit-progress-value {
         margin-left: -350px;
     }
 }
+
+.is-a-logo {
+    border-radius: 100px;
+    border: #31364C 3px solid;
+}

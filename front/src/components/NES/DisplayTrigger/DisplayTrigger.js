@@ -4,10 +4,17 @@ import Translation from '../../HOC/Translation/Translation';
 
 class DisplayTrigger extends Component {
   render() {
-    const {classes, toggleCSSFramework, text} = this.props;
-    return (
-      <div className={"nes-btn nes-theme-button"} onClick={toggleCSSFramework}>{text.displayTriggerNES}</div>
-    );
+    const {toggleCSSFramework, text, getActiveCSS} = this.props;
+
+    if (getActiveCSS() === 'nes') {
+      return (
+        <div className={'nes-btn nes-theme-button'} onClick={toggleCSSFramework}>{text.displayTriggerNES}</div>
+      );
+    } else {
+      return (
+        <div className="button" onClick={toggleCSSFramework}>{text.displayTriggerBulma}</div>
+      );
+    }
   }
 }
 
