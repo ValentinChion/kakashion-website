@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
-import Test from '../Test/Test';
-import CSSTranslate from '../HOC/CSSHandle/CSSTranslate';
+import Test from '../DisplayTrigger/DisplayTrigger';
+import CSSTranslate from '../../HOC/CSSHandle/CSSTranslate';
 import Landing from '../Landing/Landing';
 import About from '../About/About';
 import Resume from '../Resume/Resume';
@@ -18,7 +18,6 @@ class AppDisplayer extends Component {
           <About/>
           <Resume/>
           <Portfolio/>
-          <Test/>
         </div>
         <Footer scrollValue={scrollValue}/>
       </>

@@ -33,6 +33,8 @@ export const french = {
     third: 'Portfolio',
     fourth: 'Contact'
   },
+  displayTriggerNES : 'Version classique',
+  displayTriggerBulma: 'Version NES 2D',
   landing: {
     title: 'Bienvenue sur mon site !',
     subtitle: 'Je suis développeur full-stack, et mon nom est Valentin Chion.'
@@ -72,7 +74,7 @@ export const french = {
     title: 'Un mini CV',
     experience: {
       title:'Expérience Pro',
-      cellOne: 'Développeur Talend - Sopra Steria - Lille - Septembre 2018 | ...',
+      cellOne: 'Développeur Talend - Sopra Steria - Lille - Septembre 2018 | Maintenant',
       cellTwo: 'Développeur VBA - Tupperware - Belgique - Mai | Décembre 2017',
       cellThree: 'Développeur VBA - Safran Aircraft Engines - Vernon - Juin | Août 2016',
     },
@@ -102,6 +104,8 @@ export const english = {
     third: 'Portfolio',
     fourth: 'Contact'
   },
+  displayTriggerNES : 'Classic version',
+  displayTriggerBulma: 'NES 2D version',
   landing: {
     title: 'I\'m Valentin Chion',
     subtitle: 'A full-stack developper, and a lot more !'
@@ -141,7 +145,7 @@ export const english = {
     title: 'My resume',
     experience: {
       title:'Experience',
-      cellOne: 'Talend Developper - Sopra Steria - France - September 2018 | ...',
+      cellOne: 'Talend Developper - Sopra Steria - France - September 2018 | Now',
       cellTwo: 'VBA Developper - Tupperware - Belgium - May | December 2017',
       cellThree: 'VBA Developper - Safran Aircraft Engines - France - June | August 2016',
     },

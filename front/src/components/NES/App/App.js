@@ -3,9 +3,9 @@ import AppDisplayer from './AppDisplayer';
 import BulmaNavbarDisplayer from '../Navbar/BulmaNavbarDisplayer';
 import NesNavbarDisplayer from '../Navbar/NesNavbarDisplayer';
 
-import CSSTranslate from '../HOC/CSSHandle/CSSTranslate';
-import Translation from '../HOC/Translation/Translation';
-import {getActiveCSS} from '../../utils/CSS';
+import CSSTranslate from '../../HOC/CSSHandle/CSSTranslate';
+import Translation from '../../HOC/Translation/Translation';
+import {getActiveCSS} from '../../../utils/CSS';
 import './App.css';
 import './blocks.scss';
 

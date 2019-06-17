@@ -64,6 +64,12 @@ body {
     max-height: 2vw;
 }
 
+.nes-theme-button {
+    position: absolute;
+    left: 60vw;
+    top: 2vw;
+}
+
 .nes-card-image {
     display: block;
     max-height: 26vw;

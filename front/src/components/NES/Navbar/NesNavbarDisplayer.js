@@ -1,8 +1,8 @@
 import React, {Component} from 'react';
-import CSSTranslate from '../HOC/CSSHandle/CSSTranslate';
-import kakashion from './../../utils/images/kakashion.png';
+import CSSTranslate from '../../HOC/CSSHandle/CSSTranslate';
+import kakashion from '../../../utils/images/kakashion.png';
 import {Link} from 'react-scroll';
-import Translation from '../HOC/Translation/Translation';
+import Translation from '../../HOC/Translation/Translation';
 
 class NesNavbarDisplayer extends Component {
   render() {

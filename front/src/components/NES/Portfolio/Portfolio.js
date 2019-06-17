@@ -1,12 +1,12 @@
 import React, {Component} from 'react';
-import CSSTranslate from '../HOC/CSSHandle/CSSTranslate';
-import Translation from '../HOC/Translation/Translation';
+import CSSTranslate from '../../HOC/CSSHandle/CSSTranslate';
+import Translation from '../../HOC/Translation/Translation';
 import NesCard from './NesCard';
-import clalogo from './../../utils/images/portfolio/CLA_logo.png';
-import articles from './../../utils/images/portfolio/articles.png';
-import gamerlife from './../../utils/images/portfolio/gamer-life.png';
-import apprenticeship from './../../utils/images/portfolio/apprenticeship.png';
-import irate from './../../utils/images/portfolio/iRate.png';
+import clalogo from '../../../utils/images/portfolio/CLA_logo.png';
+import articles from '../../../utils/images/portfolio/articles.png';
+import gamerlife from '../../../utils/images/portfolio/gamer-life.png';
+import apprenticeship from '../../../utils/images/portfolio/apprenticeship.png';
+import irate from '../../../utils/images/portfolio/iRate.png';
 
 class Portfolio extends Component {
   render() {
@@ -16,20 +16,20 @@ class Portfolio extends Component {
         <div className="nes-container with-title container">
           <h3 className="title">{text.portfolio.title}</h3>
           <div className="nes-card-container">
-            <NesCard title={text.portfolio.cards.cardOne} 
-                     imgsource={clalogo} 
+            <NesCard title={text.portfolio.cards.cardOne}
+                     imgsource={clalogo}
                      link={'https://github.com/ValentinChion/cawebsite'}/>
-            <NesCard title={text.portfolio.cards.cardTwo} 
-                     imgsource={articles} 
+            <NesCard title={text.portfolio.cards.cardTwo}
+                     imgsource={articles}
                      link={'https://github.com/NansD/articles'}/>
-            <NesCard title={text.portfolio.cards.cardThree} 
-                     imgsource={gamerlife} 
+            <NesCard title={text.portfolio.cards.cardThree}
+                     imgsource={gamerlife}
                      link={'https://github.com/ValentinChion/gamerlife'}/>
-            <NesCard title={text.portfolio.cards.cardFour} 
+            <NesCard title={text.portfolio.cards.cardFour}
                      imgsource={apprenticeship}
                      link={'https://github.com/ValentinChion/apprenticeship-presentation'}/>
-            <NesCard title={text.portfolio.cards.cardFive} 
-                     imgsource={irate} 
+            <NesCard title={text.portfolio.cards.cardFive}
+                     imgsource={irate}
                      link={'https://github.com/EBM2018/iRate'}/>
           </div>
         </div>

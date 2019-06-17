@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import LandingDisplayer from './LandingDisplayer';
-import Translation from '../HOC/Translation/Translation';
+import Translation from '../../HOC/Translation/Translation';
 
 class Landing extends Component {
   state = {

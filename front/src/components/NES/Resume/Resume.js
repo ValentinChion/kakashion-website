@@ -1,11 +1,10 @@
 import React, { Component } from 'react'
-import CSSTranslate from '../HOC/CSSHandle/CSSTranslate';
-import Translation from '../HOC/Translation/Translation';
+import CSSTranslate from '../../HOC/CSSHandle/CSSTranslate';
+import Translation from '../../HOC/Translation/Translation';
 
 class Resume extends Component {
   render() {
     const {text} = this.props;
-    console.log(text);
     return (
       <div className="gap-header" name="Resume">
       <div className="nes-container with-title container">

@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
-import CSSTranslate from '../HOC/CSSHandle/CSSTranslate';
-import kakashionCV from './../../utils/CV/CV_CHION_Valentin.pdf';
-import Translation from '../HOC/Translation/Translation';
+import CSSTranslate from '../../HOC/CSSHandle/CSSTranslate';
+import kakashionCV from '../../../utils/CV/CV_CHION_Valentin.pdf';
+import Translation from '../../HOC/Translation/Translation';
 
 class About extends Component {
   render() {
