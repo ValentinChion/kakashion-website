@@ -1,7 +1,5 @@
 import React, {Component} from 'react';
 import AppDisplayer from './AppDisplayer';
-import BulmaNavbar from '../Bulma/Navbar/Navbar';
-import NesNavbarDisplayer from '../NES/Navbar/NesNavbarDisplayer';
 
 import CSSTranslate from '../HOC/CSSHandle/CSSTranslate';
 import Translation from '../HOC/Translation/Translation';
@@ -14,13 +12,11 @@ class App extends Component {
   state = {
     navbar: '',
     scrollValue: 0,
+    isVisibleLanding: true,
   };
 
   componentDidMount() {
-    if (getActiveCSS() === 'bulma') {
-      this.setState({navbar: <BulmaNavbar/>})
-    } else {
-      this.setState({navbar: <NesNavbarDisplayer/>});
+    if (getActiveCSS() === 'nes') {
       window.addEventListener('scroll', this.listenToScroll);
     }
 
@@ -28,7 +24,6 @@ class App extends Component {
       this.props.setLanguage('fr');
     }
   }
-
   listenToScroll = () => {
     const winScroll =
       document.body.scrollTop || document.documentElement.scrollTop;
@@ -49,9 +44,19 @@ class App extends Component {
     window.removeEventListener('scroll', this.listenToScroll)
   }
 
+  LandingVisibility = (isVisible) => {
+    this.setState({
+      isVisibleLanding: isVisible
+    })
+  }
+
   render() {
     return (
-      <AppDisplayer navbar={this.state.navbar} scrollValue={this.state.scrollValue}/>
+      <AppDisplayer navbar={this.state.navbar} 
+                    scrollValue={this.state.scrollValue}
+                    isVisibleLanding={this.state.isVisibleLanding}
+                    LandingVisibility={this.LandingVisibility}
+      />
     );
   }
 }

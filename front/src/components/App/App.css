@@ -633,4 +633,26 @@ progress[value]::-webkit-progress-value {
 .is-a-logo {
     border-radius: 100px;
     border: #31364C 3px solid;
+    margin-left: 10px;
+    max-width: 40px;
+    max-height: 40px;
+    margin-top: 4px;
+}
+
+.container-logo{
+    border-bottom-color: #dbdbdb;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+}
+
+.fixed-position {
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    background-color: white;
+    z-index: 1;
+}
+
+.is-background{
+    z-index: 3;
 }

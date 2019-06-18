@@ -1,13 +1,17 @@
 import React, {Component} from 'react';
 import CSSTranslate from '../HOC/CSSHandle/CSSTranslate';
+import ReactVisibilitySensor from 'react-visibility-sensor'
 
+import NesNavbarDisplayer from '../NES/Navbar/NesNavbarDisplayer';
 import NESLanding from '../NES/Landing/Landing';
 import NESAbout from '../NES/About/About';
 import NESResume from '../NES/Resume/Resume';
 import { Footer } from '../NES/Footer/Footer';
 import NESPortfolio from '../NES/Portfolio/Portfolio';
 
+import BulmaNavbar from '../Bulma/Navbar/Navbar';
 import BulmaLanding from '../Bulma/Landing/Landing';
+
 
 class AppDisplayer extends Component {
   render() {
@@ -16,7 +20,7 @@ class AppDisplayer extends Component {
     if (getActiveCSS() === 'nes') {
       return (
         <>
-          {navbar}
+          <NesNavbarDisplayer/>
           <NESLanding/>
           <div className={classes.layout}>
             <NESAbout/>
@@ -27,10 +31,13 @@ class AppDisplayer extends Component {
         </>
       );
     } else {
+      const {LandingVisibility, isVisibleLanding} = this.props;
       return (
         <>
-          {navbar}
-          <BulmaLanding/>
+          <BulmaNavbar isVisibleLanding={isVisibleLanding}/>
+          <ReactVisibilitySensor onChange={LandingVisibility}>
+            <BulmaLanding/>
+          </ReactVisibilitySensor>
         </>
       )
     }
