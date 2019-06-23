@@ -1,0 +1,29 @@
+.container-logo{
+    border-bottom-color: #dbdbdb;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+}
+
+.fixed-position {
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    background-color: white;
+    z-index: 1;
+}
+
+.is-background{
+    z-index: 3;
+}
+
+.post-header {
+    border-color: #ff0083;
+    padding-left: 1rem;
+    border-left: 4px solid #ff0083;
+}
+
+.post-content {
+    padding-top: 1.8rem;
+    font-size: 1.3rem;
+    font-weight: 300;
+}

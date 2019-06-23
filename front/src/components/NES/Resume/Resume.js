@@ -34,6 +34,7 @@ class Resume extends Component {
           </table>
         </div>
         </div>
+        <div className="gap"></div>
         <div className="mario-content">
           <div className="mario-wrapper">
             <div className="state1"/>

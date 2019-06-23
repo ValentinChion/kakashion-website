@@ -3,9 +3,8 @@ import AppDisplayer from './AppDisplayer';
 
 import CSSTranslate from '../HOC/CSSHandle/CSSTranslate';
 import Translation from '../HOC/Translation/Translation';
-import {getActiveCSS} from '../../utils/CSS';
-import './App.css';
-import './blocks.scss';
+import '../../style/nes-enhance.css';
+import '../../style/blocks.scss';
 
 
 class App extends Component {

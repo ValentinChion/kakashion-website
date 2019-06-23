@@ -37,6 +37,7 @@ class About extends Component {
             </section>
           </section>
         </div>
+        <div className="gap-header" name="Contact"/>
         <div className='nes-container with-title container'>
           <h3 className='title'>{text.more.title}</h3>
           <div className="lists">

@@ -13,7 +13,7 @@ class Portfolio extends Component {
     const {text} = this.props;
     return (
       <div style={{'marginTop': '17vw'}} className="gap-header" name="Portfolio">
-        <div className="nes-container with-title container">
+        <div className="nes-container with-title container nes-resume">
           <h3 className="title">{text.portfolio.title}</h3>
           <div className="nes-card-container">
             <NesCard title={text.portfolio.cards.cardOne}

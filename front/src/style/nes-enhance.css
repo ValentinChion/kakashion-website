@@ -65,9 +65,10 @@ body {
 }
 
 .nes-theme-button {
-    position: absolute;
+    position: relative;
     left: 60vw;
     top: 2vw;
+    z-index: 1;
 }
 
 .nes-card-image {
@@ -155,7 +156,6 @@ a > .nes-badge {
     font-size: 1.38vw;
 }
 
-
 .gap-header {
     padding-top: 6.2vw;
 }
@@ -218,10 +218,10 @@ a > .nes-badge {
 
 progress[value] {
     -webkit-appearance: none;
-    -webkit-transition : width 5s ease;
-    -moz-transition : width 5s ease;
-    -o-transition : width 5s ease;
-    transition : width 5s ease;
+    -webkit-transition: width 5s ease;
+    -moz-transition: width 5s ease;
+    -o-transition: width 5s ease;
+    transition: width 5s ease;
     width: 100vw;
     height: 2vw;
 }
@@ -238,7 +238,7 @@ progress[value]::-webkit-progress-value {
     .nes-hello {
         padding-top: 10vw;
     }
-  }
+}
 
 .message-list > .message {
     display: flex;
@@ -639,32 +639,18 @@ progress[value]::-webkit-progress-value {
     margin-top: 4px;
 }
 
-.container-logo{
-    border-bottom-color: #dbdbdb;
-    border-bottom-width: 1px;
-    border-bottom-style: solid;
+.nes-container {
+    padding-left: 5vw !important;
+    padding-right: 5vw !important;
+    margin-right: 15vw;
+    margin-left: 15vw;
+    margin-top: 3vw;
 }
 
-.fixed-position {
-    position: fixed;
-    top: 0px;
-    width: 100%;
-    background-color: white;
-    z-index: 1;
+.nes-resume {
+    margin-bottom: 4vw;
 }
 
-.is-background{
-    z-index: 3;
-}
-
-.post-header {
-    border-color: #ff0083;
-    padding-left: 1rem;
-    border-left: 4px solid #ff0083;
-}
-
-.post-content {
-    padding-top: 1.8rem;
-    font-size: 1.3rem;
-    font-weight: 300;
+.gap {
+    margin-top: 5vw;
 }

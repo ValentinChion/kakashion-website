@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {CSSBulma, CSSNes, getActiveCSS, setCSS} from '../../../utils/CSS';
+import {getActiveCSS, setCSS} from '../../../utils/CSS';
 
 function CssTranslate(WrappedComponent) {
   return class extends Component {
@@ -10,10 +10,8 @@ function CssTranslate(WrappedComponent) {
     componentDidMount() {
       if (getActiveCSS() === 'bulma') {
         setCSS('bulma');
-        this.setState({classes: CSSBulma})
       } else {
         setCSS('nes');
-        this.setState({classes: CSSNes})
       }
     }
 

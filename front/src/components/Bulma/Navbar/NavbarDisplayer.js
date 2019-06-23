@@ -10,7 +10,7 @@ class NavbarDisplayer extends Component {
       <>
         <div className="tabs is-centered is-medium fixed-position">
           <div className="container-logo">
-            <img src={kakashion} className="is-a-logo" width="80"/>
+            <img src={kakashion} className="is-a-logo" width="80" alt="Kakashi's face on profile, bexause it's my logo"/>
           </div>
           <ul>
             <li><Link to='Home' spy={true} smooth={true} duration={500}>Home</Link></li>

@@ -1,5 +1,5 @@
 export function setCSS(frameworkName) {
-  if(window.localStorage.getItem('kakashion-website')) {
+  if (window.localStorage.getItem('kakashion-website')) {
     const localStorage = JSON.parse(window.localStorage.getItem('kakashion-website'));
     if (localStorage.css !== frameworkName) {
       window.location.reload(true);
@@ -20,7 +20,13 @@ export function setCSS(frameworkName) {
 }
 
 export function getCSSfile() {
-  JSON.parse(window.localStorage.getItem('kakashion-website')).css === 'bulma' ? require('../style/bulma.scss') : require('../style/nes.scss');
+  if (JSON.parse(window.localStorage.getItem('kakashion-website')).css === 'bulma') {
+    require('../style/bulma.scss');
+    require('../style/bulma-enhance.css');
+  } else {
+    require('../style/nes.scss');
+    require('../style/nes-enhance.css');
+  }
 }
 
 export function getActiveCSS() {
@@ -30,14 +36,3 @@ export function getActiveCSS() {
     return false
   }
 }
-
-export const CSSBulma = {
-  button: 'button',
-  layout: '',
-};
-
-export const CSSNes = {
-  button: 'nes-btn',
-  badge: 'nes-badge',
-  layout: 'nes-layout',
-};
