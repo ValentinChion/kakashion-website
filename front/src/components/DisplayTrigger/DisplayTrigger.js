@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
-import CSSTranslate from '../../HOC/CSSHandle/CSSTranslate';
-import Translation from '../../HOC/Translation/Translation';
+import CSSTranslate from '../HOC/CSSHandle/CSSTranslate';
+import Translation from '../HOC/Translation/Translation';
 
 class DisplayTrigger extends Component {
   render() {

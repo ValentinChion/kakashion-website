@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import CSSTranslate from '../../HOC/CSSHandle/CSSTranslate';
+import DisplayTrigger from '../../DisplayTrigger/DisplayTrigger';
 
 class LandingDisplayer extends Component {
   render() {
@@ -12,6 +13,7 @@ class LandingDisplayer extends Component {
                 Fullheight hero with navbar
               </p>
             </div>
+            <DisplayTrigger/>
           </div>
         </section>
       </>

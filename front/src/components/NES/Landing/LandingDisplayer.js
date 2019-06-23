@@ -4,7 +4,7 @@ import Hello from './Hello';
 import frenchFlag from '../../../utils/images/flags/frenchFlag.png';
 import englishFlag from '../../../utils/images/flags/englishFlag.png';
 import Translation from '../../HOC/Translation/Translation';
-import DisplayTrigger from '../DisplayTrigger/DisplayTrigger';
+import DisplayTrigger from '../../DisplayTrigger/DisplayTrigger';
 
 class LandingDisplayer extends Component {
   render() {

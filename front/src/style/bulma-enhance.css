@@ -27,3 +27,9 @@
     font-size: 1.3rem;
     font-weight: 300;
 }
+
+html {
+    font-family: "Segoe UI", serif !important;
+    overflow-x: visible !important;
+    overflow-y: visible !important;
+}

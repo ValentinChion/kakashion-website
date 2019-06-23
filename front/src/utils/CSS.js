@@ -21,11 +21,11 @@ export function setCSS(frameworkName) {
 
 export function getCSSfile() {
   if (JSON.parse(window.localStorage.getItem('kakashion-website')).css === 'bulma') {
-    require('../style/bulma.scss');
-    require('../style/bulma-enhance.css');
+    import('../style/bulma.scss');
+    import('../style/bulma-enhance.css');
   } else {
-    require('../style/nes.scss');
-    require('../style/nes-enhance.css');
+    import('../style/nes.scss');
+    import('../style/nes-enhance.css');
   }
 }
 
