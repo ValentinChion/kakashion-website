@@ -12,18 +12,16 @@ class App extends Component {
   state = {
     navbar: '',
     scrollValue: 0,
-    isVisibleLanding: true,
   };
 
   componentDidMount() {
-    if (getActiveCSS() === 'nes') {
-      window.addEventListener('scroll', this.listenToScroll);
-    }
+    window.addEventListener('scroll', this.listenToScroll);
 
     if (!this.props.getActiveLanguage()) {
       this.props.setLanguage('fr');
     }
   }
+
   listenToScroll = () => {
     const winScroll =
       document.body.scrollTop || document.documentElement.scrollTop;
@@ -44,18 +42,9 @@ class App extends Component {
     window.removeEventListener('scroll', this.listenToScroll)
   }
 
-  LandingVisibility = (isVisible) => {
-    this.setState({
-      isVisibleLanding: isVisible
-    })
-  }
-
   render() {
     return (
-      <AppDisplayer navbar={this.state.navbar} 
-                    scrollValue={this.state.scrollValue}
-                    isVisibleLanding={this.state.isVisibleLanding}
-                    LandingVisibility={this.LandingVisibility}
+      <AppDisplayer scrollValue={this.state.scrollValue}
       />
     );
   }

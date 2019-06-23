@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import CSSTranslate from '../HOC/CSSHandle/CSSTranslate';
-import ReactVisibilitySensor from 'react-visibility-sensor'
 
 import NesNavbarDisplayer from '../NES/Navbar/NesNavbarDisplayer';
 import NESLanding from '../NES/Landing/Landing';
@@ -11,11 +10,12 @@ import NESPortfolio from '../NES/Portfolio/Portfolio';
 
 import BulmaNavbar from '../Bulma/Navbar/Navbar';
 import BulmaLanding from '../Bulma/Landing/Landing';
+import BulmaAbout from '../Bulma/About/About';
 
 
 class AppDisplayer extends Component {
   render() {
-    const {navbar, classes, scrollValue, getActiveCSS} = this.props;
+    const {classes, scrollValue, getActiveCSS} = this.props;
 
     if (getActiveCSS() === 'nes') {
       return (
@@ -35,9 +35,8 @@ class AppDisplayer extends Component {
       return (
         <>
           <BulmaNavbar isVisibleLanding={isVisibleLanding}/>
-          <ReactVisibilitySensor onChange={LandingVisibility}>
-            <BulmaLanding/>
-          </ReactVisibilitySensor>
+          <BulmaLanding/>
+          <BulmaAbout/>
         </>
       )
     }

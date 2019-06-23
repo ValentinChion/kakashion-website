@@ -656,3 +656,15 @@ progress[value]::-webkit-progress-value {
 .is-background{
     z-index: 3;
 }
+
+.post-header {
+    border-color: #ff0083;
+    padding-left: 1rem;
+    border-left: 4px solid #ff0083;
+}
+
+.post-content {
+    padding-top: 1.8rem;
+    font-size: 1.3rem;
+    font-weight: 300;
+}

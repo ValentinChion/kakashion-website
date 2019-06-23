@@ -50,6 +50,18 @@ export const french = {
       four: 'ReactJS et Express',
       five: 'afin de proposer des solutions performantes aux besoins web des entreprises'
     },
+    bulmaOnly: {
+      title: {
+        one: 'Junior',
+        two: 'Talend-Studio',
+        three: 'Fullstack Javascript',
+      },
+      subtitle: {
+        one: 'Et beaucoup à apprendre',
+        two: 'Pour mieux appréhender la gestion de donnée',
+        three: 'Pour proposer des développements moderne',
+      }
+    }
   },
   more: {
     title: 'Des informations sur moi',
@@ -121,6 +133,18 @@ export const english = {
       four: 'ReactJS and Express',
       five: 'to give efficient solution to web problems'
     },
+    bulmaOnly: {
+      title: {
+        one: 'Junior',
+        two: 'Talend-Studio',
+        three: 'Full-stack Javascript',
+      },
+      subtitle: {
+        one: 'And a lot to learn',
+        two: 'To learn about data',
+        three: 'For up-to-date development',
+      },
+    }
   },
   more: {
     title: 'More info',

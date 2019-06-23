@@ -5,7 +5,6 @@ import NavbarDisplayer from './NavbarDisplayer';
 class Navbar extends Component {
   render() {
     const {isVisibleLanding} = this.props;
-    console.log(isVisibleLanding);
     return (
       <div>
         <NavbarDisplayer isVisibleLanding={isVisibleLanding}/>
